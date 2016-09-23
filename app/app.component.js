@@ -15,7 +15,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: '<hero-form></hero-form>'
+            template: '<car-form></car-form>'
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

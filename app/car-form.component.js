@@ -9,28 +9,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var forms_1 = require('@angular/forms');
-var app_component_1 = require('./app.component');
-var car_form_component_1 = require('./car-form.component');
-var AppModule = (function () {
-    function AppModule() {
+var Car_1 = require('./Car');
+var CarFormComponent = (function () {
+    function CarFormComponent() {
+        this.models = ['Fast', 'Medium', 'weak'];
+        this.model = new Car_1.Car(1, 'BMW', this.models[0], 'Street Rider');
+        this.submitted = false;
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [
-                platform_browser_1.BrowserModule,
-                forms_1.FormsModule
-            ],
-            declarations: [
-                app_component_1.AppComponent,
-                car_form_component_1.CarFormComponent
-            ],
-            bootstrap: [app_component_1.AppComponent]
+    CarFormComponent.prototype.onsubmit = function () { this.submitted = true; };
+    Object.defineProperty(CarFormComponent.prototype, "diagnostic", {
+        get: function () {
+            return JSON.stringify(this.model);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    CarFormComponent = __decorate([
+        core_1.Component({
+            selector: 'car-form',
+            templateUrl: 'app/car-form.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], CarFormComponent);
+    return CarFormComponent;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.CarFormComponent = CarFormComponent;
+//# sourceMappingURL=car-form.component.js.map
