@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+
+
 @Component({
   selector: 'my-app',
-  template: '<hero-form></hero-form>'
+  template: '<car-form></car-form>'
 })
 export class AppComponent { }
