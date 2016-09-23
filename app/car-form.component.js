@@ -9,12 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var hero_1 = require('./hero');
-var HeroFormComponent = (function () {
-    function HeroFormComponent() {
+var Car_1 = require('./Car');
+var CarFormComponent = (function () {
+    function CarFormComponent() {
         this.powers = ['Really Smart', 'Super Flexible',
             'Super Hot', 'Weather Changer'];
-        this.model = new hero_1.Hero(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
+        this.model = new Car_1.Car(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
         this.submitted = false;
         // Reset the form with a new hero AND restore 'pristine' class state
         // by toggling 'active' flag which causes the form
@@ -22,21 +22,21 @@ var HeroFormComponent = (function () {
         // TODO: Workaround until NgForm has a reset method (#6822)
         this.active = true;
     }
-    HeroFormComponent.prototype.onSubmit = function () { this.submitted = true; };
-    HeroFormComponent.prototype.newHero = function () {
+    CarFormComponent.prototype.onSubmit = function () { this.submitted = true; };
+    CarFormComponent.prototype.newHero = function () {
         var _this = this;
-        this.model = new hero_1.Hero(42, '', '');
+        this.model = new Car_1.Car(42, '', '');
         this.active = false;
         setTimeout(function () { return _this.active = true; }, 0);
     };
-    HeroFormComponent = __decorate([
+    CarFormComponent = __decorate([
         core_1.Component({
-            selector: 'hero-form',
-            templateUrl: 'app/hero-form.component.html'
+            selector: 'car-form',
+            templateUrl: 'app/car-form.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], HeroFormComponent);
-    return HeroFormComponent;
+    ], CarFormComponent);
+    return CarFormComponent;
 }());
-exports.HeroFormComponent = HeroFormComponent;
-//# sourceMappingURL=hero-form.component.js.map
+exports.CarFormComponent = CarFormComponent;
+//# sourceMappingURL=car-form.component.js.map

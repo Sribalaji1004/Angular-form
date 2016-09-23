@@ -2,7 +2,7 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 import { AppComponent }  from './app.component';
-import { HeroFormComponent } from './hero-form.component';
+import { CarFormComponent } from './car-form.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -10,7 +10,7 @@ import { HeroFormComponent } from './hero-form.component';
   ],
   declarations: [
     AppComponent,
-    HeroFormComponent
+    CarFormComponent
   ],
   bootstrap: [ AppComponent ]
 })

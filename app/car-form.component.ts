@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { Hero }    from './hero';
+import { Car }    from './Car';
 @Component({
-  selector: 'hero-form',
-  templateUrl: 'app/hero-form.component.html'
+  selector: 'car-form',
+  templateUrl: 'app/car-form.component.html'
 })
-export class HeroFormComponent {
+export class CarFormComponent {
   powers = ['Really Smart', 'Super Flexible',
             'Super Hot', 'Weather Changer'];
-  model = new Hero(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
+  model = new Car(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
   submitted = false;
   onSubmit() { this.submitted = true; }
   // Reset the form with a new hero AND restore 'pristine' class state
@@ -16,7 +16,7 @@ export class HeroFormComponent {
   // TODO: Workaround until NgForm has a reset method (#6822)
   active = true;
   newHero() {
-    this.model = new Hero(42, '', '');
+    this.model = new Car(42, '', '');
     this.active = false;
     setTimeout(() => this.active = true, 0);
   }
