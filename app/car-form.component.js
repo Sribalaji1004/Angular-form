@@ -12,9 +12,9 @@ var core_1 = require('@angular/core');
 var Car_1 = require('./Car');
 var CarFormComponent = (function () {
     function CarFormComponent() {
-        this.powers = ['Really Smart', 'Super Flexible',
-            'Super Hot', 'Weather Changer'];
-        this.model = new Car_1.Car(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
+        this.powers = ['X6', 'M6',
+            'I8', '740'];
+        this.model = new Car_1.Car(18, '', this.powers[0], '');
         this.submitted = false;
         // Reset the form with a new hero AND restore 'pristine' class state
         // by toggling 'active' flag which causes the form

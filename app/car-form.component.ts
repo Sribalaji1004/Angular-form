@@ -5,9 +5,9 @@ import { Car }    from './Car';
   templateUrl: 'app/car-form.component.html'
 })
 export class CarFormComponent {
-  powers = ['Really Smart', 'Super Flexible',
-            'Super Hot', 'Weather Changer'];
-  model = new Car(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
+  powers = ['X6', 'M6',
+            'I8', '740'];
+  model = new Car(18, '', this.powers[0], '');
   submitted = false;
   onSubmit() { this.submitted = true; }
   // Reset the form with a new hero AND restore 'pristine' class state
